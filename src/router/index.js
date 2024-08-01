@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TestView from '../views/TestView.vue'
-import BasicView from '../views/BasicView.vue'
 import LoginView from '../views/LoginView.vue'
+import BasicView from '../views/BasicView.vue'
+import LoginTeacherver from '../views/LoginTeacherver.vue'
 
 const routes = [
   {
@@ -24,14 +25,19 @@ const routes = [
     component: TestView
   },
   {
-    path: '/basic',
-    name: 'basic',
-    component: BasicView
-  },
-  {
     path: '/subsub',
     name: 'subsub',
     component: LoginView
+  },
+  {
+    path: '/basic',
+    name: 'BasicView',
+    component: BasicView
+  },
+  {
+    path: '/form-container',
+    name: 'LoginTeacherver',
+    component: LoginTeacherver
   },
 ]
 
