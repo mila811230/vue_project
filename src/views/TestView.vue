@@ -106,7 +106,7 @@ export default {
         alert('메세지 발생')
     },
     showScore(){
-        this.score = (this.kor + this.eng + this.math) / 3
+        this.average = (this.kor + this.eng + this.math) / 3
     },
     // generateGugudan() {
     //   this.gugudan = []; // 이전 구구단 결과 초기화
