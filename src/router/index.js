@@ -4,6 +4,7 @@ import TestView from '../views/TestView.vue'
 import LoginView from '../views/LoginView.vue'
 import BasicView from '../views/BasicView.vue'
 import LoginTeacherver from '../views/LoginTeacherver.vue'
+import PracSelf from '../views/PracSelf.vue'
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: '/form-container',
     name: 'LoginTeacherver',
     component: LoginTeacherver
+  },
+  {
+    path: '/pracSelf',
+    name: 'PracSelf',
+    component: PracSelf
   },
 ]
 

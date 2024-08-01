@@ -6,6 +6,7 @@
     <router-link to="/basic">3. BasicView(연습)</router-link>
     <router-link to="/subsub">4. LoginView(만들기)</router-link>
     <router-link to="/form-container">5. LoginTeach(선생님)</router-link>
+    <router-link to="/PracSelf">6. PracSelf(누적)</router-link>
 
   </nav>
   <router-view/>
