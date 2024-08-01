@@ -1,25 +1,31 @@
 <template>
-  <div class="test">
-    <input type="text" value= "333"><br>
-    <!-- <input type="text" v-bind = "nick"><br> -->
-    <input type="text" v-model = "nick"><br>
-    <input type="number" v-model = "age"><br>
-    <textarea cols="30" rows="10">동해물과 백두산이</textarea><br>
-    <textarea v-model = "message" id="" cols="30" rows="10"></textarea><br>
-    <select name="" id="">
-        <option value="01">서울</option>
-        <option value="02" selected>부산</option>
-        <option value="03">대구</option>
-        <option value="04">수원</option>
-    </select>
-    <br>
-    <select v-model = "city">
-        <option value="01">서울</option>
-        <option value="02">부산</option>
-        <option value="03">대구</option>
-        <option value="04">수원</option>
-    </select>
+  <div class="">
     
+        <input type="checkbox" id = "cbtn_agree" name = "cbtn_agree">
+        <label for="cbtn_agree">동의</label><br>
+
+        <label><input type="checkbox" v-model = "agree">동의</label><br>
+        <label><input type="checkbox" v-model = "agree2"
+            true-value = "동의" false-value = "비동의">{{agree2}}</label><br>
+        
+        <div>
+        <p>기본 피자에 원하시는 토핑을 추가하세요.</p>
+            <label><input type="checkbox" v-model = "pizza" value = "치즈">치즈</label><br>
+            <label><input type="checkbox" v-model = "pizza" value = "파인애플">파인애플</label><br>
+            <label><input type="checkbox" v-model = "pizza" value = "버섯">버섯</label><br>
+        <p>당신이 추가하신 토핑은 {{pizza}}입니다</p>
+        </div>
+
+        <br>
+
+        <div>
+            <p>당신의 탕수육 취향은?</p>
+            <label><input type ="radio" v-model = "sweet_sour_pork" value = "부먹">부먹</label>
+            <label><input type ="radio" v-model = "sweet_sour_pork" value = "찍먹">찍먹</label>
+            <!-- <label><input type ="radio" v-model = "sweet_sour_pork" value = "찍먹">처먹</label> -->
+            <p>당신은 <span style="color:red; font-weight: 800;">{{ sweet_sour_pork }}파 입니다.</span></p>
+        </div>
+
   </div>
 </template>
 
@@ -31,13 +37,14 @@ export default {
   },
   data() {
     return {
-      nick: '노래하는 해달',
-      age: 30,
-      message: '깊은 산속 옹달샘 누가와서 먹나요?',
-      city: '03',
+        agree: false,
+        agree2: '비동의',
+        pizza: [],
+        sweet_sour_pork: '찍먹',
+      
     }
   },
-  
+ 
   methods: {
     
   }
