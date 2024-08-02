@@ -1,7 +1,7 @@
 <template>
   <div class="son">
     <!-- 내용을 추가하세요 -->
-     <p>큰아들 : {{ message }}</p>
+     <p>큰아들 : {{ message }} {{ msg }}</p>
      <Cute-Gson-11 ref = "gson11"/>
      <Cute-Gson-12 ref = "gson12" @event_report = "receiveEvent"/>
      <input type="text" v-model = "sendMessage"><br>
@@ -58,8 +58,9 @@ export default {
   },
   computed: {
     // 필요한 계산된 속성을 정의합니다.
-    // sample2() {
-    //   return '' 
+    // msg() {
+    //   this.message = this.$refs.gson11.gsonMsg +'!!'
+    //   return ''
     // }
   },
   methods: {

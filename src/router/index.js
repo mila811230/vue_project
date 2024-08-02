@@ -6,6 +6,7 @@ import BasicView from '../views/BasicView.vue'
 import LoginTeacherver from '../views/LoginTeacherver.vue'
 import PracSelf from '../views/PracSelf.vue'
 import DeepView from '../views/DeepView.vue'
+import DeepView2 from '../views/DeepView2.vue'
 
 const routes = [
   {
@@ -23,7 +24,7 @@ const routes = [
   },
   {
     path: '/test',
-    name: 'test',
+    name: 'TestView',
     component: TestView
   },
   {
@@ -47,9 +48,14 @@ const routes = [
     component: PracSelf
   },
   {
-    path: '/deep',
+    path: '/DeepView',
     name: 'DeepView',
     component: DeepView
+  },
+  {
+    path: '/DeepView2',
+    name: 'DeepView2',
+    component: DeepView2
   },
 ]
 

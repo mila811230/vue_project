@@ -7,7 +7,8 @@
     <router-link to="/subsub">4. LoginView(만들기)</router-link>
     <router-link to="/form-container">5. LoginTeach(선생님)</router-link>
     <router-link to="/PracSelf">6. PracSelf(누적)</router-link>
-    <router-link to="/DeepView">8. 컴포넌트(심화)</router-link>
+    <router-link to="/DeepView">8. 컴포넌트딥뷰(심화1)</router-link>
+    <router-link to="/DeepView2">9. 할부지딥뷰</router-link>
 
   </nav>
   <router-view/>

@@ -2,6 +2,7 @@
   <div class="gson">
     <!-- 내용을 추가하세요 -->
       <p v-bind:style = "{color:tcolor}">큰집손자1 : {{ message }}</p>
+      <input type="text" v-model = "gsonMsg">
       <button @click = "clickMsg" >일손메세지</button>
   </div>
 </template>
@@ -40,6 +41,7 @@ export default {
       message: '',
       index: 1,
       tcolor: 'red',
+      gsonMsg: '',
     }
   },
   watch: {

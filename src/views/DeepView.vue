@@ -1,13 +1,31 @@
 <template>
+
   <div class="">
-    <!-- 내용을 추가하세요 -->
-    <p>DeepView Page</p>
+    <page-title title="title1" age="3"
+    hobbies="['자전거','등산','꽃꽂이','게임']"
+    family="{'papa':'아빠','mom':'엄마'}"
+    />
+    <page-title :title="title1" :age="age" 
+    :hobbies="hobbies"
+    :family="family"  
+    :func="customFunc"
+    />
   </div>
+  <div>
+    <input type="text" v-model="hobby">
+    <button @click='addHobby'>취미추가</button>
+  </div>
+
+  <hr>
+
+
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle.vue'
 export default {
   name: 'DeepView',
+
   props: {
     // 문자열 타입의 prop 예시
     //sampleString: {
@@ -31,12 +49,17 @@ export default {
     //}
   },
   components: {
-    // 추가적으로 사용할 컴포넌트들을 등록합니다.
+        PageTitle
+
   },
   data() {
     return {
-      // 컴포넌트의 데이터를 초기화합니다.
-    }
+      title1:'page 1',
+      age:3,
+      hobbies:[],
+      hobby:'',
+      family:{papa:'아빠',mom:'엄마'},
+    };
   },
   watch: {
     // sample1() {
@@ -51,10 +74,13 @@ export default {
     // 필요한 계산된 속성을 정의합니다.
   },
   methods: {
-    // sample3() {
-    //   return ''
-    // }
-    // 컴포넌트에서 사용할 메서드를 정의합니다.
+    addHobby() {      
+      this.hobbies.push(this.hobby)
+      return ''
+    },
+    customFunc(){
+      return '부모 지정 사용자함수'
+    }
   },
   setup() {
     // Vue 3 Composition API의 setup 함수에서 추가적인 로직을 처리할 수 있습니다.
@@ -68,7 +94,7 @@ export default {
   unmounted() {
     // 컴포넌트가 파괴되기 전 실행될 로직을 작성합니다.
   }
-}
+};
 </script>
 
 <style scoped>
