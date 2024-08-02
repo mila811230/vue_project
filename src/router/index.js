@@ -5,6 +5,7 @@ import LoginView from '../views/LoginView.vue'
 import BasicView from '../views/BasicView.vue'
 import LoginTeacherver from '../views/LoginTeacherver.vue'
 import PracSelf from '../views/PracSelf.vue'
+import DeepView from '../views/DeepView.vue'
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
     path: '/pracSelf',
     name: 'PracSelf',
     component: PracSelf
+  },
+  {
+    path: '/deep',
+    name: 'DeepView',
+    component: DeepView
   },
 ]
 

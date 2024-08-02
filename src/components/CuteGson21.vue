@@ -1,22 +1,16 @@
 <template>
-  <div class="">
+  <div class="gson">
     <!-- 내용을 추가하세요 -->
-     <br><br><br><br>
-     <input type="button" value = "할부지버튼" @click = "clickGpapa">
-     <GoodSon10 ref = "son10"/>
-     <GoodSon20 ref = "son20"/>
+    <p v-bind:style= "{color:tcolor}" >작은집손자 1 {{ message }}</p>
+
   </div>
 </template>
 
 <script>
-import GoodSon10 from '@/components/GoodSon10.vue'
-import GoodSon20 from '@/components/GoodSon20.vue'
 export default {
-  name: 'TestView',
+  name: 'CuteGson21',
   components: {
     // 추가적으로 사용할 컴포넌트들을 등록합니다.
-    GoodSon10, 
-    GoodSon20
   },
   props: {
     // 문자열 타입의 prop 예시
@@ -43,6 +37,9 @@ export default {
   data() {
     return {
       // 컴포넌트의 데이터를 초기화합니다.
+      index: 1,
+      tcolor : 'red',
+      message: '',
 
     }
   },
@@ -60,14 +57,12 @@ export default {
   },
   methods: {
     // 컴포넌트에서 사용할 메서드를 정의합니다.
-    clickGpapa () {
-       //alert('clickGpapa() 시작')
-      // 둘째아들 호출해서 글시 파란색으로 바꾸기
-      this.$refs.son10.changeTextColor(2, 'blue')
-      this.$refs.son20.changeTextColor(2, 'blue')
-      //alert('clickGpapa() 끝')
 
-    }
+    changeTextColor(idx, data){
+     if (this.index == idx){
+       this.tcolor = data
+     }
+   },
   },
   setup() {
     // Vue 3 Composition API의 setup 함수에서 추가적인 로직을 처리할 수 있습니다.
@@ -86,4 +81,10 @@ export default {
 
 <style scoped>
 /* 스타일을 추가하세요 */
+.gson{
+  background-color: rgb(250, 212, 218);
+}
+.son{
+  background-color: rgb(178, 255, 229);
+}
 </style>

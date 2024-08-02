@@ -1,22 +1,25 @@
 <template>
-  <div class="">
+  <div class="son">
     <!-- 내용을 추가하세요 -->
-     <br><br><br><br>
-     <input type="button" value = "할부지버튼" @click = "clickGpapa">
-     <GoodSon10 ref = "son10"/>
-     <GoodSon20 ref = "son20"/>
+     <p>큰아들 : {{ message }}</p>
+     <Cute-Gson-11 ref = "gson11"/>
+     <Cute-Gson-12 ref = "gson12" @event_report = "receiveEvent"/>
+     <input type="text" v-model = "sendMessage"><br>
+     <button @click = "clickSon10">큰아들버튼</button><br>
+     <button @click = "clickSon20">큰아들버튼2</button><br>
+     <button @click = "clickSon30">큰아들버튼3</button>
   </div>
 </template>
 
 <script>
-import GoodSon10 from '@/components/GoodSon10.vue'
-import GoodSon20 from '@/components/GoodSon20.vue'
+import CuteGson11 from './CuteGson11.vue';
+import CuteGson12 from './CuteGson12.vue';
 export default {
-  name: 'TestView',
+  name: 'GoodSon10',
   components: {
     // 추가적으로 사용할 컴포넌트들을 등록합니다.
-    GoodSon10, 
-    GoodSon20
+    CuteGson11, 
+    CuteGson12
   },
   props: {
     // 문자열 타입의 prop 예시
@@ -43,7 +46,8 @@ export default {
   data() {
     return {
       // 컴포넌트의 데이터를 초기화합니다.
-
+      message: '',
+      sendMessage: '',
     }
   },
   watch: {
@@ -60,14 +64,32 @@ export default {
   },
   methods: {
     // 컴포넌트에서 사용할 메서드를 정의합니다.
-    clickGpapa () {
-       //alert('clickGpapa() 시작')
-      // 둘째아들 호출해서 글시 파란색으로 바꾸기
-      this.$refs.son10.changeTextColor(2, 'blue')
-      this.$refs.son20.changeTextColor(2, 'blue')
-      //alert('clickGpapa() 끝')
+    clickSon10() {
+      this.message = '큰아들이 버튼을 눌렀습니다.'
+      this.$refs.gson11.clickMsg()
 
+    },
+    clickSon20() {
+      this.message = '큰아들2가 버튼을 눌렀습니다.'
+      this.$refs.gson12.clickMsg('큰아버지가 둘째아들을 불러봄')
+
+    },
+    clickSon30() {
+      this.message = '큰아들3이 버튼을 눌렀쪄.'
+      this.$refs.gson11.message = this.sendMessage
+      this.$refs.gson12.message = this.sendMessage
+    },
+    changeTextColor (idx, data) {
+      //  alert('goodson2=>' + idx + ',' + data)
+      this.$refs.gson11.changeTextColor(idx, data)
+      this.$refs.gson12.changeTextColor(idx, data)
+      // alert('goodson2=>' + idx + ',' + data)
+    },
+    receiveEvent (data) {
+      // alert(data)
+      this.message = data
     }
+
   },
   setup() {
     // Vue 3 Composition API의 setup 함수에서 추가적인 로직을 처리할 수 있습니다.
@@ -86,4 +108,13 @@ export default {
 
 <style scoped>
 /* 스타일을 추가하세요 */
+.son{
+  background-color: rgb(178, 255, 229);
+  padding: 20px;
+  margin: 20px;
+}
+.gson{
+  background-color: rgb(250, 212, 218);
+
+}
 </style>

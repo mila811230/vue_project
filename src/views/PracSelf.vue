@@ -50,7 +50,7 @@
         <br>
     <h3>--------------------------------속성연결-------------------------------- </h3>
     <div>
-      <img src='https://borgssam.github.io/MySite/img/album_01.jpg' title ="가방을 든 사나이"><br>
+      <img src='https://i.pinimg.com/736x/39/a3/86/39a386434b6882e1f6baf9b3f7daf0da.jpg' title ="가방을 든 사나이"><br>
       <img v-bind:src="imgSrc" alt="" v-bind:title = "imgTitle"><br>
     </div>
     <br>
@@ -216,7 +216,7 @@ export default {
         agree2: '비동의',
         pizza: [],
         sweet_sour_pork: '찍먹',
-        imgSrc: 'https://borgssam.github.io/MySite/img/album_01.jpg',
+        imgSrc: 'https://item.kakaocdn.net/do/009619490db024d6a8acf277cb93a6c58f324a0b9c48f77dbce3a43bd11ce785',
         imgTitle: '가방을 든 사나이',
         btn_01: true,
         btn_02: false,
