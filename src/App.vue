@@ -10,6 +10,15 @@
     <router-link to="/DeepView">8. 컴포넌트딥뷰(심화1)</router-link>
     <router-link to="/DeepView2">9. 할부지딥뷰</router-link>
 
+    <router-link to="/CalculatorView1">10. 계산기1</router-link>
+    <router-link to="/CalculatorView2">11. 계산기2</router-link>
+    <router-link to="/CalculatorView3">12. 계산기3</router-link>
+    <router-link to="/CalculatorView4">13. 계산기4</router-link>
+    <router-link to="/MixView">14. MixIn</router-link>
+    <router-link to="/UserView">15. vuex예제1</router-link>
+    <router-link to="/MemberView">15. vuex예제(회원목록)</router-link>
+
+
   </nav>
   <router-view/>
 </template>

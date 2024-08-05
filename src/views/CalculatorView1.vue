@@ -1,16 +1,19 @@
 <template>
-  <div class="gson">
+  <div class="">
     <!-- 내용을 추가하세요 -->
-    <p v-bind:style= "{color:tcolor}" >작은집손자 1 {{ message }}</p>
-    {{ gpapaLen }}
-
+     <h3>
+       CaculatorView1
+     </h3>
+     <input type="text" v-model = "num1" @keyup = "plusNumbers"/> <span> + </span>
+     <input type="text" v-model = "num2" @keyup = "plusNumbers"/> <span> = </span>
+     <span> {{ result }}</span>
 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CuteGson21',
+  name: 'CaculatorView1',
   components: {
     // 추가적으로 사용할 컴포넌트들을 등록합니다.
   },
@@ -39,12 +42,11 @@ export default {
   data() {
     return {
       // 컴포넌트의 데이터를 초기화합니다.
-      index: 1,
-      tcolor : 'red',
-      message: '',
+      num1: 0,
+      num2: 0,
+      result:0,
     }
   },
-  inject: ['gpapaLen'],
   watch: {
     // 데이터를 감시하고 처리할 로직을 작성합니다.
     // sample1() {
@@ -59,12 +61,9 @@ export default {
   },
   methods: {
     // 컴포넌트에서 사용할 메서드를 정의합니다.
-
-    changeTextColor(idx, data){
-     if (this.index == idx){
-       this.tcolor = data
-     }
-   },
+    plusNumbers() {
+      this.result = Number(this.num1) + Number(this.num2)
+    }
   },
   setup() {
     // Vue 3 Composition API의 setup 함수에서 추가적인 로직을 처리할 수 있습니다.
@@ -83,10 +82,4 @@ export default {
 
 <style scoped>
 /* 스타일을 추가하세요 */
-.gson{
-  background-color: rgb(250, 212, 218);
-}
-.son{
-  background-color: rgb(178, 255, 229);
-}
 </style>

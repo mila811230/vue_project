@@ -7,6 +7,13 @@ import LoginTeacherver from '../views/LoginTeacherver.vue'
 import PracSelf from '../views/PracSelf.vue'
 import DeepView from '../views/DeepView.vue'
 import DeepView2 from '../views/DeepView2.vue'
+import CalculatorView1 from '../views/CalculatorView1.vue'
+import CalculatorView2 from '../views/CalculatorView2.vue'
+import CalculatorView3 from '../views/CalculatorView3.vue'
+import CalculatorView4 from '../views/CalculatorView4.vue'
+import MixView from '../views/MixView.vue'
+import UserView from '../views/UserView.vue'
+import MemberView from '../views/MemberView.vue'
 
 const routes = [
   {
@@ -28,17 +35,17 @@ const routes = [
     component: TestView
   },
   {
-    path: '/subsub',
-    name: 'subsub',
+    path: '/LoginView',
+    name: 'LoginView',
     component: LoginView
   },
   {
-    path: '/basic',
+    path: '/BasicView',
     name: 'BasicView',
     component: BasicView
   },
   {
-    path: '/form-container',
+    path: '/LoginTeacherver',
     name: 'LoginTeacherver',
     component: LoginTeacherver
   },
@@ -56,6 +63,41 @@ const routes = [
     path: '/DeepView2',
     name: 'DeepView2',
     component: DeepView2
+  },
+  {
+    path: '/CalculatorView1',
+    name: 'CalculatorView1',
+    component: CalculatorView1
+  },
+  {
+    path: '/CalculatorView2',
+    name: 'CalculatorView2',
+    component: CalculatorView2
+  },
+  {
+    path: '/CalculatorView3',
+    name: 'CalculatorView3',
+    component: CalculatorView3
+  },
+  {
+    path: '/CalculatorView4',
+    name: 'CalculatorView4',
+    component: CalculatorView4
+  },
+  {
+    path: '/MixView',
+    name: 'MixView',
+    component: MixView
+  },
+  {
+    path: '/UserView',
+    name: 'UserView',
+    component: UserView
+  },
+  {
+    path: '/MemberView',
+    name: 'MemberView',
+    component: MemberView
   },
 ]
 

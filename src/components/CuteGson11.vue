@@ -4,6 +4,7 @@
       <p v-bind:style = "{color:tcolor}">큰집손자1 : {{ message }}</p>
       <input type="text" v-model = "gsonMsg">
       <button @click = "clickMsg" >일손메세지</button>
+      {{ gpapaMin }}
   </div>
 </template>
 
@@ -44,6 +45,7 @@ export default {
       gsonMsg: '',
     }
   },
+  inject: ['gpapaMin'],
   watch: {
     // 데이터를 감시하고 처리할 로직을 작성합니다.
     // sample1() {

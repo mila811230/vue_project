@@ -6,4 +6,4 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "/VUE_PROJECT/" : "/",
   outputDir: "docs",
-};
+}

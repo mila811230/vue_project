@@ -8,6 +8,7 @@
      <button @click = "clickSon10">큰아들버튼</button><br>
      <button @click = "clickSon20">큰아들버튼2</button><br>
      <button @click = "clickSon30">큰아들버튼3</button>
+     {{ gpapaMin }}
   </div>
 </template>
 
@@ -50,9 +51,10 @@ export default {
       sendMessage: '',
     }
   },
+  inject: ['gpapaMin'],
   watch: {
     // 데이터를 감시하고 처리할 로직을 작성합니다.
-    // sample1() {
+    // sample1() {a
     //   console.log('')
     // }
   },
